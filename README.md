@@ -28,3 +28,26 @@ The Electricity Calculator is a user-friendly application built with Electron.js
 
 1. Clone the repository:
 
+
+## Usage
+
+1. Run the application:
+
+
+2. The Electricity Calculator application will open. Use the provided interface to perform various calculations and analyze electricity usage and costs.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to the Electricity Calculator, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Make your changes and commit them: `git commit -m 'Add your feature'`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+
