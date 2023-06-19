@@ -151,3 +151,8 @@ body {
 .three {
     bottom: 119px;
 }
+
+.user {
+    position: relative;
+    bottom: 240px;
+}

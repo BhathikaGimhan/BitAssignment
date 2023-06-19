@@ -21,5 +21,5 @@ window.addEventListener('DOMContentLoaded', () => {
         div.innerHTML += name;
     });
 
-    // connection.end();
+    connection.end();
 });
