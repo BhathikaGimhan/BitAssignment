@@ -2,6 +2,13 @@ function closeWindow() {
     window.close();
 }
 
+const { ipcRenderer } = require('electron');
+
+const minimizeButton = document.getElementById('minimize');
+minimizeButton.addEventListener('click', () => {
+    ipcRenderer.send('minimize-window');
+});
+
 let isDragging = false;
 let offset = {
     x: 0,
@@ -29,3 +36,8 @@ function handleMouseMove(e) {
 function handleMouseUp() {
     isDragging = false;
 }
+
+// document.getElementById('minimizeButton').addEventListener('click', () => {
+//     const window = remote.getCurrentWindow();
+//     window.minimize();
+// });

@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
 
 if (require('electron-squirrel-startup')) {
@@ -33,7 +33,6 @@ function createWindow() {
             }
         }]
     }];
-
 
 
     const menu = Menu.buildFromTemplate(menuTemplate);
@@ -85,4 +84,17 @@ app.on('web-contents-created', (event, contents) => {
     contents.on('will-attach-webview', (event) => {
         event.preventDefault();
     });
+});
+
+app.whenReady().then(() => {
+    // ...
+
+    ipcMain.on('minimize-window', () => {
+        const currentWindow = BrowserWindow.getFocusedWindow();
+        if (currentWindow) {
+            currentWindow.minimize();
+        }
+    });
+
+    // ...
 });
