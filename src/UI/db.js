@@ -10,13 +10,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     connection.connect();
 
-    const sql = 'SELECT `name`, `age`, `address`, `other` FROM `test`';
+    const sql = 'SELECT * FROM `user`';
 
     connection.query(sql, function(error, results, fields) {
         if (error) throw error;
 
-        const name = results[0].other;
-        console.log(results[0].name);
+        const name = results[0].name;
+        console.log(results[0].id);
         const div = document.getElementById("name");
         div.innerHTML += name;
     });
