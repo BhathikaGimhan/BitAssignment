@@ -1,6 +1,7 @@
 const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
 
+
 if (require('electron-squirrel-startup')) {
     app.quit();
 }
@@ -9,10 +10,11 @@ let mainWindow;
 
 function createWindow() {
     mainWindow = new BrowserWindow({
-        width: 780,
+        width: 1280,
+        // 780
         height: 517,
         frame: false,
-        resizable: false,
+        // resizable: false,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: true,
