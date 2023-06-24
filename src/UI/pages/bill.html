@@ -1,58 +1,110 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Hello World!</title>
-    <link rel="stylesheet" href="../index.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="full-bar">
-        <ul id="closeBar" type="none">
-            <li class="bar">
-                <div></div>
-            </li>
-            <li>
-                <div class="barButton" onclick="closeWindow()"><i class="material-icons">close</i></div>
-            </li>
-            <li>
-                <div class="barButton" id="minimize"><i class="material-icons">minimize</i></div>
-            </li>
-        </ul>
+      <ul id="closeBar" type="none">
+        <li class="bar">
+          <div></div>
+        </li>
+        <li>
+          <div class="barButton" onclick="closeWindow()">
+            <i class="material-icons">close</i>
+          </div>
+        </li>
+        <li>
+          <div class="barButton" id="minimize">
+            <i class="material-icons">minimize</i>
+          </div>
+        </li>
+      </ul>
     </div>
     <div class="container">
-        <h1>💖 Hello World!</h1>
-        <p>Welcome to your Electron BILL.</p>
-        <div id="name"></div>
+      <h1>💖 Hello World!</h1>
+      <p>Welcome to your Electron BILL.</p>
+      <div id="name"></div>
+
+      <div id="val"></div>
     </div>
     <div class="footer">
-        <ul type="none" id="footerBar">
+      <ul type="none" id="footerBar">
+        <li>
+          <button
+            class="menuBtn"
+            onclick="window.location.href = '../index.html'"
+          >
+            <i class="material-icons">home</i>
+          </button>
+          <ul type="none" class="menuSubBtn">
             <li>
-                <button class="menuBtn" onclick="window.location.href = '../index.html'"><i class="material-icons">home</i></button>
-                <ul type="none" class="menuSubBtn">
-                    <li><button class="one" onclick="window.location.href = '../pages/history.html'"><i class="material-icons">history</i></button></li>
-                    <li><button class="two" onclick="window.location.href = '../pages/timeline.html'"><i class="material-icons">timeline</i></button></li>
-                    <li><button class="three" onclick="window.location.href = '../pages/bill.html'"><i class="material-icons">receipt_long</i></button></li>
-                    <li><button class="user" onclick="window.location.href = '../pages/user.html'"><i class="material-icons">person</i></button></li>
-                </ul>
+              <button
+                class="one"
+                onclick="window.location.href = '../pages/history.html'"
+              >
+                <i class="material-icons">history</i>
+              </button>
             </li>
             <li>
-                <div>
-                    <input class="inputBar" placeholder="Enter Your Point" type="text" name="sd" id="">
-                </div>
+              <button
+                class="two"
+                onclick="window.location.href = '../pages/timeline.html'"
+              >
+                <i class="material-icons">timeline</i>
+              </button>
             </li>
             <li>
-                <div>
-                    <button class="submit">Submit</button>
-                </div>
+              <button
+                class="three"
+                onclick="window.location.href = '../pages/bill.html'"
+              >
+                <i class="material-icons">receipt_long</i>
+              </button>
             </li>
-        </ul>
+            <li>
+              <button
+                class="user"
+                onclick="window.location.href = '../pages/user.html'"
+              >
+                <i class="material-icons">person</i>
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div>
+            <input
+              class="inputBar"
+              placeholder="Enter Your Point"
+              type="text"
+              name="sd"
+              id="inputId"
+            />
+          </div>
+        </li>
+        <li>
+          <div>
+            <button
+              class="submit"
+              onclick="DisplayData(document.getElementById('inputId').value)"
+            >
+              Submit
+            </button>
+          </div>
+        </li>
+      </ul>
     </div>
+
+    <script src="./bill.js"></script>
     <script src="../db.js"></script>
     <script src="../menuBar.js"></script>
-</body>
-
+  </body>
 </html>
