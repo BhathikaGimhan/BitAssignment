@@ -3,6 +3,7 @@ body {
     border-radius: 10px;
     color: aliceblue;
     border-color: 2px rgb(79, 79, 255);
+    font-style: normal;
 }
 
 .full-bar {
