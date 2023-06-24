@@ -84,7 +84,7 @@ table th {
     color: black;
 }
 
-input {
+.changeInput {
     min-width: 120px!important;
     max-width: 10.99%!important;
     position: absolute;

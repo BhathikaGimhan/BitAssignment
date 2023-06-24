@@ -37,6 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 td.setAttribute("data-column", key); // Add data-column attribute to identify the column
                 td.addEventListener("click", () => {
                     const input = document.createElement("input");
+                    input.classList.add("changeInput");
                     input.type = "text";
                     input.value = value;
                     input.addEventListener("blur", () => {
