@@ -10,7 +10,9 @@
     <style>
         table {
             border-collapse: collapse;
-            width: 100%;
+            width: 90%;
+            left: 40px;
+            position: relative;
         }
         
         table th,
@@ -18,10 +20,21 @@
             padding: 8px;
             text-align: left;
             border-bottom: 1px solid #ddd;
+            position: relative;
         }
         
         table th {
             background-color: #f2f2f2;
+            color: black;
+        }
+        
+        input {
+            min-width: 120px!important;
+            max-width: 10.99%!important;
+            position: absolute;
+            bottom: 6px;
+            /* transition: width 0.25s; */
+            /* text-align: center; */
         }
         
         table td input[type="text"] {
@@ -66,7 +79,7 @@
             </li>
             <li>
                 <div>
-                    <input class="inputBar" placeholder="Enter Your Point" type="text" name="sd" id="">
+                    <!-- <input class="inputBar" placeholder="Enter Your Point" type="text" name="sd" id=""> -->
                 </div>
             </li>
             <li>

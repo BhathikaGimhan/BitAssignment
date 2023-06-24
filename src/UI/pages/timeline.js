@@ -106,7 +106,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     console.error("Error occurred during updates:", error);
                 })
                 .finally(() => {
-                    connection.end(); // Close the database connection after all updates are completed
+                    // connection.end(); // Close the database connection after all updates are completed
                 });
         });
 
