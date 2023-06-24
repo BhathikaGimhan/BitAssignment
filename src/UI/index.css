@@ -23,6 +23,11 @@ body {
     position: absolute;
 }
 
+.data {
+    position: relative;
+    top: 80px;
+}
+
 .pageTitle {
     position: absolute;
     top: 20px;

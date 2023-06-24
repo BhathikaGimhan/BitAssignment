@@ -1,5 +1,7 @@
 let blockValues = [];
 let FixedCharge = [];
+const para = document.getElementById("para");
+para.innerHTML += 'Enter your monthly Electricity Point';
 
 window.addEventListener("DOMContentLoaded", () => {
     const mysql = require("mysql");
@@ -72,9 +74,11 @@ window.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
+            para.innerHTML = '';
+            para.innerHTML += 'Your monthly Electricity Bill';
             const div = document.getElementById("val");
             div.innerHTML = '';
-            div.innerHTML += BillAmount;
+            div.innerHTML += 'RS, ' + BillAmount + ".00";
         }
 
         // Add button click event listener here
