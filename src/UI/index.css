@@ -58,6 +58,40 @@ body {
     padding: 30px;
 }
 
+table {
+    border-collapse: collapse;
+    width: 90%;
+    left: 40px;
+    position: relative;
+}
+
+table th,
+table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+input {
+    min-width: 120px!important;
+    max-width: 10.99%!important;
+    position: absolute;
+    bottom: 6px;
+    /* transition: width 0.25s; */
+    /* text-align: center; */
+}
+
+table td input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .submit {
     position: absolute;
     color: #FFFFFF;
