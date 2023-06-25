@@ -116,6 +116,9 @@ window.addEventListener("DOMContentLoaded", () => {
             // connection.end();
             // app.quit(); // Quit the Electron application if you want
         });
+        var element = document.getElementById("myElement");
+        element.classList.replace("saveBtnShow", "saveBtnHide");
+
     });
 
 
