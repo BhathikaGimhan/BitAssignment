@@ -25,7 +25,9 @@
     </div>
     <div class="container">
         <h1>💖 Hello World!</h1>
-        <p>Welcome to your Electron application.</p>
+        <p style="width: 500px; position: relative; left: 80px;">The electricity bill calculator is a tool that allows users to estimate the amount they would need to pay for their electricity consumption. By inputting relevant information such as the energy usage in kilowatt-hours (kWh) and the applicable
+            tariff rates, the calculator provides an approximate calculation of the total bill amount. It helps users understand and plan their electricity expenses by providing a quick and convenient way to estimate their monthly or periodic costs based
+            on their specific energy usage.</p>
         <div id="name"></div>
     </div>
     <div class="footer">
@@ -36,12 +38,11 @@
                     <li><button class="one" onclick="window.location.href = './pages/history.html'"><i class="material-icons">history</i></button></li>
                     <li><button class="two" onclick="window.location.href = './pages/timeline.html'"><i class="material-icons">timeline</i></button></li>
                     <li><button class="three" onclick="window.location.href = './pages/bill.html'"><i class="material-icons">receipt_long</i></button></li>
-                    <li><button class="user" onclick="window.location.href = './pages/user.html'"><i class="material-icons">person</i></button></li>
                 </ul>
             </li>
             <li>
                 <div>
-                    <input class="inputBar" placeholder="Enter Your Point" type="text" name="sd" id="">
+                    <input class="inputBar" placeholder="Enter Your Point" type="text" name="sd" id="myInput">
                 </div>
             </li>
             <li>
@@ -51,7 +52,12 @@
             </li>
         </ul>
     </div>
-    <script src="./db.js"></script>
+    <script>
+        const input = document.getElementById('myInput');
+        input.addEventListener('click', () => {
+            window.location.href = './pages/bill.html'; // Replace 'https://example.com' with the desired URL
+        });
+    </script>
     <script src="./menuBar.js"></script>
 </body>
 
