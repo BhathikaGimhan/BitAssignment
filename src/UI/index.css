@@ -25,7 +25,22 @@ body {
 
 .data {
     position: relative;
-    top: 80px;
+    top: 70px;
+}
+
+code {
+    position: absolute;
+    bottom: -15px;
+    left: 160px;
+    width: 300px;
+}
+
+.saveBtnHide {
+    display: none;
+}
+
+.saveBtnShow {
+    display: block;
 }
 
 .pageTitle {
@@ -101,6 +116,18 @@ table th {
 table td input[type="text"] {
     width: 100%;
     box-sizing: border-box;
+}
+
+#saveBill {
+    color: #FFFFFF;
+    text-shadow: 0 0 5px black;
+    cursor: pointer;
+    width: 124px;
+    height: 48px;
+    margin: 20px;
+    background: radial-gradient(circle at 90% 10%, #6aff65, #000000);
+    box-shadow: 0 0 2px white;
+    border-radius: 44px;
 }
 
 .submit {

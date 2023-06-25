@@ -78,7 +78,12 @@ window.addEventListener("DOMContentLoaded", () => {
             para.innerHTML += 'Your monthly Electricity Bill';
             const div = document.getElementById("val");
             div.innerHTML = '';
+            const hideval = document.getElementById('hideVal');
+            hideval.value = BillAmount;
             div.innerHTML += 'RS, ' + BillAmount + ".00";
+            var element = document.getElementById("myElement");
+            element.classList.replace("saveBtnHide", "saveBtnShow");
+
         }
 
         // Add button click event listener here
@@ -87,7 +92,39 @@ window.addEventListener("DOMContentLoaded", () => {
             var inputValue = document.getElementById('inputId').value;
             DisplayData(inputValue);
         });
+
+
     });
 
+    const billBtn = document.getElementById("saveBill");
+    billBtn.addEventListener("click", () => {
+        const point = document.getElementById("inputId").value;
+        const saveData = document.getElementById("hideVal").value;
+
+        const insertQuery = "INSERT INTO history (saveData, point) VALUES (?, ?)";
+        const insertValues = [saveData, point];
+
+        connection.query(insertQuery, insertValues, function(error, results, fields) {
+            if (error) {
+                console.error("Error saving data:", error);
+                return;
+            }
+
+            console.log("Data saved successfully!");
+
+            // Close the database connection when done
+            // connection.end();
+            // app.quit(); // Quit the Electron application if you want
+        });
+    });
+
+
+    // const billBtn = document.getElementById('saveBill');
+    // billBtn.addEventListener("click", () => {
+    //     const saveData = document.getElementById("val");
+    //     const point = document.getElementById('inputId').value;
+    //     console.log(saveData.innerHTML);
+    //     console.log(point);
+    // });
     // connection.end();
 });
