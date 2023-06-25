@@ -1,9 +1,27 @@
 let blockValues = [];
 let FixedCharge = [];
 const para = document.getElementById("para");
+
+window.onload = function() {
+    var inputField = document.getElementById("inputId");
+    inputField.focus();
+
+    inputField.addEventListener("keydown", function(event) {
+        // Allow only backspace, delete, and arrow keys
+        if (event.key === "Backspace" || event.key === "Delete" || event.key.includes("Arrow")) {
+            return;
+        }
+
+        // Prevent input if not a number
+        if (!/^\d$/.test(event.key)) {
+            event.preventDefault();
+        }
+    });
+};
 para.innerHTML += 'Enter your monthly Electricity Point';
 
 window.addEventListener("DOMContentLoaded", () => {
+
     const mysql = require("mysql");
 
     const connection = mysql.createConnection({
