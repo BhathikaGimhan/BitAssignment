@@ -55,6 +55,7 @@ Contributions are welcome! If you'd like to contribute to the Electricity Calcul
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+Just replace `BitAssignment` with your BhathikaGimhan in the clone URL and follow the installation steps as described. This will guide users on how to install the required dependencies for your Electricity Calculator project.
+
 
 
