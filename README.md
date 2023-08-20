@@ -27,6 +27,13 @@ The Electricity Calculator is a user-friendly application built with Electron.js
 ## Installation
 
 1. Clone the repository:
+2. Install the required dependencies using npm:
+    - `npm install`
+    - `npm install ejs@3.1.9`
+    - `npm install electron-squirrel-startup@1.0.0`
+    - `npm install express@4.18.2`
+    - `npm install mysql@2.18.1`
+
 
 
 ## Usage
